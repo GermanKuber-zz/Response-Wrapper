@@ -5,7 +5,6 @@ using Xunit;
 
 public class RealCasesShould
 {
-
     [Fact]
     public void Login_Success()
     {
@@ -148,7 +147,6 @@ public class RealCasesShould
             SuccessResult = true;
             Result = response;
         }
-
 
         protected Response(List<string> errors)
         {

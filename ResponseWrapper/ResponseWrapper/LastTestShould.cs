@@ -6,31 +6,6 @@ using Xunit;
 
 public class LastTestShould
 {
-
-    [Fact]
-    public void Contain_instance_of_result()
-    {
-        var sut = Response<string>.Ok("Test");
-        sut.Result.Should().Be("Test");
-    }
-    [Fact]
-    public void Know_if_is_success()
-    {
-        var sut = Response<string>.Ok("Test");
-        sut.SuccessResult.Should().Be(true);
-    }
-    [Fact]
-    public void Know_if_is_a_error()
-    {
-        var sut = Response<string>.Error("Error");
-        sut.SuccessResult.Should().Be(false);
-    }
-    [Fact]
-    public void Return_all_errors()
-    {
-        var sut = Response<string>.Error(new List<string> { "Error", "Error 2" });
-        sut.Errors.Count().Should().Be(2);
-    }
     [Fact]
     public void Do_Something_Success_Case()
     {
@@ -57,8 +32,6 @@ public class LastTestShould
         sut.Error(errorsToShow => countErrors = errorsToShow.Count());
         countErrors.Should().Be(errors.Count());
     }
-
-
 
 
     public class Response<TResponse>

@@ -48,6 +48,5 @@ namespace ResponseWrapper
                 Errors.AddRange(errors);
             }
         }
-
     }
 }
